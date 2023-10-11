@@ -24,7 +24,7 @@ def load_checkpoint(path):
     """
 
     # Get the model name
-    model_name = path.split('-')[0]
+    model_name = path.split('_')[0]
     assert (model_name in ['resnet50'
                            ]), "Path must have the correct model name"
 
@@ -113,11 +113,11 @@ def process_image(image_path):
 
     return img_tensor, surface
 
-def main():
+def main(path):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     n_classes = 9
 
-    checkpoint_path = "resnet50_siganus_identifier"
+    checkpoint_path = "resnet50_siganus_identifier.pth"
 
     model = models.resnet50(pretrained=True)
     # Freeze model weights
@@ -135,19 +135,19 @@ def main():
     model = model.to(device)
     model = load_checkpoint(path=checkpoint_path)
 
-    dir = "/home/vfleure/Vidéos/2022_11_06_camF1_raie_manta_2_GP230222/imagettes/"  #### A CHANGER
+    dir = path
     img_list = [os.path.join(dp, f) for dp, dn, fn in os.walk(os.path.expanduser(dir)) for f in fn]
 
-    res_file = dir + "/" + "res.csv"
+    res_file = dir / "res.csv"
     with open(res_file, "w") as csv_file :
-        csv_file.write("img_name,img_area,pred,score\n")
+        csv_file.write("img_name,img_pred,area,score\n")
         for im in img_list:
             surface, top_p, top_classes = predict(im, model, topk=1)
             img_name = im.split('/')[-1]
-            csv_file.write(img_name+","+str(surface)+','+top_classes[0]+","+str(top_p[0])+"\n")
+            csv_file.write(img_name+","+top_classes[0]+","+str(surface)+','+str(top_p[0])+"\n")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--path', action='store', required=True)
     opt = parser.parse_args()
-    main(Path(opt.video)
+    main(Path(opt.path))
