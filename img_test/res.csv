@@ -1,0 +1,17 @@
+img_name,img_pred,area,score
+Siganus_rivulatus_1.jpeg,siganus_rivulatus,123432,0.9982665
+Siganus_luridus_2.jpeg,siganus_luridus,19754,0.9961992
+Sparisoma_cretense_2.jpeg,sparisoma_cretense,99456,0.8777359
+Siganus_luridus_1.jpeg,siganus_luridus,71060,0.73145866
+Siganus_rivulatus_2.jpeg,siganus_rivulatus,32128,0.52128345
+Diplodus_sargus_2.jpeg,diplodus_sargus,7035,0.8664844
+Sarpa_salpa_2.jpeg,sarpa_salpa,32292,0.9978769
+Thalassoma_pavo_1.jpeg,thalassoma_pavo,13667,0.9999958
+Diplodus_vulgaris_1.jpeg,diplodus_vulgaris,60876,0.49439073
+Sarpa_salpa_1.jpeg,sarpa_salpa,9918,0.43202785
+Thalassoma_pavo_2.jpeg,thalassoma_pavo,18860,0.72538984
+Diplodus_vulgaris_2.jpeg,diplodus_vulgaris,35052,0.46463367
+Sparisoma_cretense_1.jpeg,sparisoma_cretense,338910,0.9796205
+Chromis_chromis_2.jpeg,chromis_chromis,6800,0.87548023
+Diplodus_sargus_1.jpeg,diplodus_sargus,8800,0.9951938
+Chromis_chromis_1.jpeg,chromis_chromis,10593,0.9999999
