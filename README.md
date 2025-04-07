@@ -1,6 +1,6 @@
 # Siganus_identifier
 
-This repository contains code that can be use reproduce results of the paper Fleuré et al. (202?) - Automated identification of invasive rabbitfishes in underwater images from the Mediterranean Sea submitted in Aquatic Conservation.
+This repository contains code that can be use reproduce results of the paper Fleuré et al. (2024) - Automated identification of invasive rabbitfishes in underwater images from the Mediterranean Sea submitted in Aquatic Conservation (https://doi.org/10.1002/aqc.4073).
 
 ## Install
 
